@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class CubeSpinScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public float rotationSpeed = 30f;
+    
+    public Vector3 rotationAxis = Vector3.up;
+    
     void Update()
     {
-        
+        transform.Rotate(rotationAxis, rotationSpeed * Time.deltaTime);
     }
 }
